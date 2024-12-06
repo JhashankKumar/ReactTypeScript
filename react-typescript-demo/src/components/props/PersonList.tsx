@@ -1,4 +1,4 @@
-import { Name } from './Person.types'
+import { Name } from '../componenttypes/ComponentType.types'
 
 type PersonListProps = {
   names: Name[]

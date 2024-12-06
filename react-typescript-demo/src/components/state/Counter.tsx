@@ -1,23 +1,24 @@
 import { useReducer } from 'react'
+import { CounterState,UpdateAction,ResetAction } from '../componenttypes/ComponentType.types'
 
-type CounterState = {
-  count: number
-}
+// type CounterState = {
+//   count: number
+// }
 
-type UpdateAction = {
-  type: 'increment' | 'decrement'
-  payload: number
-}
+// type UpdateAction = {
+//   type: 'increment' | 'decrement'
+//   payload: number
+// }
 
-type ResetAction = {
-  type: 'reset'
-}
+// type ResetAction = {
+//   type: 'reset'
+// }
 
 type CounterAction = UpdateAction | ResetAction
 
 const initialState = { count: 0 }
 
-function reducer(state: CounterState, action: CounterAction) {
+function reducer(state:CounterState, action: CounterAction) {
   switch (action.type) {
     case 'increment':
       return { count: state.count + action.payload }
